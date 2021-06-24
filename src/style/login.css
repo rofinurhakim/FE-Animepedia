@@ -1,0 +1,76 @@
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} 
+ .col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.account-page {
+    padding: 50px 0;
+    background: radial-gradient(#fff,#ffd6d6);
+}
+.form-container {
+    background: #fff;
+    width: 350px;
+    height: 500px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,1);
+    overflow: hidden;
+}
+.form-container span {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-btn a{
+   padding: 10px;
+   font-weight: 900;
+}
+.form-btn a:hover {
+    border-bottom: 1px solid  #ff523b;
+}
+.form-container form{
+    max-width: 350px;
+    padding: 0 20px;
+    position: absolute;
+    top: 40px;
+    transition: transform 1s;
+}
+.login-form input {
+    width: 90%;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.login-form .btn {
+    width: 90%;
+    border: none;
+    cursor: pointer;
+    margin: 40px 0;
+    border-radius: 5px;
+    outline: none;
+    height: 40px;
+}
+.login-form {
+    margin-top: 5%;
+}
+.login-form p {
+    padding: 10px 15px;
+    display: flex;
+}
+
