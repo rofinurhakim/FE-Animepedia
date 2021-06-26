@@ -12,11 +12,30 @@ const Details = () => {
     const imageUrl = "http://localhost:5100/";
     const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
-    const [ cart, setCart ] = useState([])
+    const productCart = useSelector(state => state.CartReducer.products);
 
     const [ products, setProducts ] = useState([])
     const {id} = useParams();
     
+    const addCart = () => {
+      const addedProduct = productCart.filter(item => item.id === products.id)[0];
+
+      if (addedProduct) {
+        addedProduct.quantity = addedProduct.quantity + quantity;
+      } else {
+        products.quantity = quantity
+      }
+
+      dispatch({
+        type: 'ADD_TO_CART', 
+        payload: {
+          products: addedProduct ? addedProduct : products,
+          quantity  
+        } 
+      })
+      alert('Produk ditambahkan ke keranjang');
+    }
+
     const getList = () => {
         client
           .get(`/api/v1/products/${id}`,{
@@ -85,7 +104,7 @@ const Details = () => {
                   </div>
                   <div className="btn-keranjang">
                    
-                      <button className="btn-default" onClick={() => dispatch({type: 'ADD_TO_CART', payload: {products, quantity} })}>Masukan Keranjang </button>
+                      <button className="btn-default" onClick={() => addCart()}>Masukan Keranjang </button>
                   </div>
                   <div className="details">
                     <h3> Deskripsi Produk <i className="fa fa-indent"></i></h3>

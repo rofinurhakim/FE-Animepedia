@@ -18,12 +18,22 @@ const CartReducer = (state = initState, action) => {
             const { products, quantity } = action.payload;
             const Tprice = state.totalPrice + (products.price * quantity);
             const Tquantities = state.totalQuantities + quantity;
+            const check = state.products.find(pr => pr.id === products.id);
+            
 
-            state = {
-                ...state,
-                products: [...state.products, products],
-                totalPrice: Tprice,
-                totalQuantities: Tquantities
+            if (check) {
+                state = {
+                    ...state,
+                    totalPrice: Tprice,
+                    totalQuantities: Tquantities
+                };
+            } else {
+                state = {
+                    ...state,
+                    products: [...state.products, products],
+                    totalPrice: Tprice,
+                    totalQuantities: Tquantities
+                }
             }
 
             localStorage.setItem('cart-data', JSON.stringify(state.products));
