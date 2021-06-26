@@ -11,7 +11,7 @@ const Nav = () => {
             <div className="container">
                 <div className="navbar">
                     <div className="logo">
-                        <Link to="/"><img src={`images/logo.png`} alt="logo"/></Link>
+                        <Link to="/"><img src={`/images/logo.png`} alt="logo"/></Link>
                     </div>
                     <nav className="menu">
                         <ul id="MenuItems">
@@ -28,7 +28,7 @@ const Nav = () => {
                     </nav>
                     <div className="img_cart">
                         <Link to="/cart">
-                            <img src={`images/cart.png`} />
+                            <img src={`/images/cart.png`} />
                         </Link>
                         <p>{totalQuantities}</p>
                     </div>

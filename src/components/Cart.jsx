@@ -12,7 +12,7 @@ import Nav from './Nav';
 const Cart = () => {
     const {totalQuantities,totalPrice} = useSelector(state => state.CartReducer);
     const dispatch = useDispatch();
-    const imageUrl = "http://localhost:5000/";
+    const imageUrl = "http://localhost:5100/";
     const [quantity, setQuantity] = useState(1);
 
     const [ product, setProducts ] = useState([])

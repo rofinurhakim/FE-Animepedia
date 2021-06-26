@@ -9,7 +9,7 @@ import client from '../service/axios';
 
 const Details = () => {
   
-    const imageUrl = "http://localhost:5000/";
+    const imageUrl = "http://localhost:5100/";
     const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
     const [ cart, setCart ] = useState([])
