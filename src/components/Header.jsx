@@ -1,9 +1,11 @@
 import React from 'react'
 import "./../style/Header.css"
 import { Link } from "react-router-dom" 
+import Nav from './Nav'
 const Header = () => {
     return (
         <div>
+            <Nav />
             <div className="header">
                 <div className="container">
                     <div className="row">

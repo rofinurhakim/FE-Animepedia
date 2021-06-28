@@ -11,7 +11,7 @@ const Nav = () => {
             <div className="container">
                 <div className="navbar">
                     <div className="logo">
-                        <Link to="/"><img src={`images/logo.png`} alt="logo"/></Link>
+                        <Link to="/"><img src={`/images/logo.png`} alt="logo"/></Link>
                     </div>
                     <nav className="menu">
                         <ul id="MenuItems">
@@ -19,22 +19,19 @@ const Nav = () => {
                             <li><Link to="/products">Product</Link></li>
                             <li><a href="">About</a></li>
                             <li><a href="">Contact</a></li>
-                            <li><a href="">Account</a>
-                                <ul className="dropdown">
-                                    <li><a href="#"><UserDropdown/></a></li>
-                                </ul>
-                            </li>
+                            <li><a href="">Account</a> </li>
+                            <li><Link to="/pesanan" className="pesan">  Pesanan Saya </Link></li>
                         </ul>
                     </nav>
                     <div className="img_cart">
                         <Link to="/cart">
-                            <img src={`images/cart.png`} />
+                            <img src={`/images/cart.png`} />
                         </Link>
                         <p>{totalQuantities}</p>
                     </div>
                 </div>
             </div>
-                      
+            <UserDropdown />    
         </div>
     )
 }

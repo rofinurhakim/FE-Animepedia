@@ -28,23 +28,20 @@ const UserDropdown = () => {
     return (
       
       <div className="user">
-        <ul>
-          <li>
+        
           <i class="fa fa-user" aria-hidden="true"></i>
             <a className="nama"
         >
           {user ? user.nama_lengkap : ""}
         </a>
-        </li>
-        <li>
             <a
             href=""
             className="out"
             onClick={() => onLogout()}
           >
            <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
-          </a></li>
-        </ul>
+          </a>
+        
         </div>
     );
   }

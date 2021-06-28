@@ -13,6 +13,7 @@ body {
     flex-basis: 30%;
     min-width: 250px;
     margin-bottom: 30px;
+    background: #fff;
 }
 .col-3 img {
     width: 100%;
@@ -34,9 +35,7 @@ body {
     justify-content: space-around;
 }
 .offer {
-    background: radial-gradient(#fff,#ffd6d6);
-    margin-top: 80px;
-    padding: 30px 0;
+    background: #fff;
 }
 .col-2 .offer-img {
     padding: 50px;
@@ -47,6 +46,7 @@ small {
 
 .testimonial {
     padding-top: 100px;
+    background: radial-gradient(#fff,#ffd6d6);
 }
 .testimonial .col-3 {
    text-align: center;
@@ -93,17 +93,13 @@ small {
 }
 .rating .fa {
     color: #ff523b;
+    font-size: 20px;
+    padding: 0px 4px 5px 0px;
 }
 .col-4:hover {
     transform: translateY(-5px);
 }
-h4 {
-    color: #555;
-    font-weight: normal;
-}
-.col-4 p {
-    font-size: 14px;
-}
+
 .col-4 {
     flex-basis: 25%;
     padding: 10px;
@@ -111,7 +107,7 @@ h4 {
     margin-bottom: 50px;
     transition: 0.5s;
 }
-.col-4 img {
+.col-4 .img-url {
     width: 100%;
     cursor: pointer;
 }
@@ -132,4 +128,21 @@ h4 {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+h4{
+    color: #fa6e5c;
+    font-weight: normal; 
+}
+h3 {
+    color: #555;
+    font-weight: 700;
+    padding-bottom: 12px;
+}
+.col-4 p {
+    font-size: 14px;
+    padding-top: 10px;
+    color: #555;
+}
+.text {
+    padding-left: 50px;
 }

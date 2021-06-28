@@ -13,16 +13,18 @@ import Products from "./components/Products";
 import { ProtectedRoute } from "./route/index"
 
 
+
 function App() {
   return (
     <Router>
      <Provider store={store}>
-     <Nav/>
+     {/* <Nav/> */}
       <Route component = {LoginPage} path="/login" />
       <Route component = {RegisterPage} path="/register" /> 
 
       <Route path="/" component ={Home} exact />
-      <Route path="/cart/:id" component={Cart} exact/>
+      <Route path="/cart" component={Cart} exact/>
+
       <Route path="/products"  component={Products} exact/>
       <Route path="/products/details/:id" component={Details} exact/>
 

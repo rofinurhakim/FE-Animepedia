@@ -61,13 +61,13 @@ p {
  }
 
  .user {
-     margin-right: 90px ;
-     margin-top: 24px;
- }
-
- .user li {
-     padding: 5px;
- }
+    float: right;
+    width: 76px;
+    position: relative;
+    right: 72px;
+    bottom: 65px
+}
+ 
 
  .user a {
      color: #555;
@@ -75,6 +75,7 @@ p {
  }
 .user .out {
     color: rgb(241, 74, 74);
+   
 }
 .user .nama {
     color: #000;
@@ -82,16 +83,6 @@ p {
 
 .user i {
     padding-right: 5px;
+    float: left;
 }
 
-.menu ul li .dropdown {
-    display: none;
-}
-
-.menu ul li:hover .dropdown {
-    display: block;
-    background: transparent;
-    position: absolute;
-    padding-right: 80px;
-   
-}

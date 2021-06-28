@@ -4,6 +4,7 @@ import "./../style/Product.css"
 import client from '../service/axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import Nav from "./Nav"
 
 const Products = () => {
   const imageUrl = "http://localhost:5000/";
@@ -74,6 +75,7 @@ const Products = () => {
 
     return (
       <div> 
+        <Nav />
         <div className="small-container">
           <div className="float-right"> 
             <h1 className="title"> Semua Produk </h1>
