@@ -11,7 +11,7 @@ import swal from 'sweetalert';
 
 const Details = () => {
   
-    const imageUrl = "http://localhost:5000/";
+    const imageUrl = "http://localhost:5100/";
     const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
     const productCart = useSelector(state => state.CartReducer.products);
@@ -35,7 +35,11 @@ const Details = () => {
           quantity  
         } 
       })
+<<<<<<< HEAD
       swal("Berhasil!", "Silakan Melakukan Pembayaran!", "success");
+=======
+      alert('Produk ditambahkan ke keranjang');
+>>>>>>> 0e225e750393d4f8d580742e0b1f39ae11106b35
     }
 
     const getList = () => {
@@ -105,7 +109,12 @@ const Details = () => {
                       <span className="quantity">{quantity}</span>
                       <span className="inc" onClick={() => setQuantity(quantity+1)}><BsPlus/></span>
                   </div>
+<<<<<<< HEAD
                   <div className="btn-keranjang">    
+=======
+                  <div className="btn-keranjang">
+                   
+>>>>>>> 0e225e750393d4f8d580742e0b1f39ae11106b35
                       <button className="btn-default" onClick={() => addCart()}>Masukan Keranjang </button>
                   </div>
                   <div className="details">

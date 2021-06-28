@@ -24,7 +24,10 @@ function App() {
 
       <Route path="/" component ={Home} exact />
       <Route path="/cart" component={Cart} exact/>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0e225e750393d4f8d580742e0b1f39ae11106b35
       <Route path="/products"  component={Products} exact/>
       <Route path="/products/details/:id" component={Details} exact/>
 

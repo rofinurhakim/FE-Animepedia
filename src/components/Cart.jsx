@@ -10,6 +10,7 @@ import { fieldError } from '../utils/errorField';
 import Footer from './Footer';
 
 const Cart = () => {
+<<<<<<< HEAD
     const { products, totalQuantities, totalPrice, user } = useSelector(state => state.CartReducer);
     
     const dispatch = useDispatch();
@@ -33,6 +34,12 @@ const Cart = () => {
         })
     }
       
+=======
+    const { products, totalQuantities, totalPrice } = useSelector(state => state.CartReducer);
+    const dispatch = useDispatch();
+    const imageUrl = "http://localhost:5100/";
+
+>>>>>>> 0e225e750393d4f8d580742e0b1f39ae11106b35
     return (
         <div>
             <Nav />

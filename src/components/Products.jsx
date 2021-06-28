@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import Nav from "./Nav"
 
 const Products = () => {
-  const imageUrl = "http://localhost:5000/";
+  const imageUrl = "http://localhost:5100/";
   const [ products, setProducts ] = useState([])
   const [pageCount, setPageCount] = useState(0);
   const [ limit, setLimit ] = useState(12)
