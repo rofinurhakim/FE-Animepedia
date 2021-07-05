@@ -8,13 +8,16 @@ import { Link } from "react-router-dom"
 import "../style/Details.css"
 import client from '../service/axios';
 import swal from 'sweetalert';
+import  ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+
 
 const Details = () => {
   
-    const imageUrl = "http://localhost:5100/";
+    const imageUrl = "http://localhost:3000/";
     const [quantity, setQuantity] = useState(1);
     const dispatch = useDispatch();
     const productCart = useSelector(state => state.CartReducer.products);
+    const [loading, setLoading] = useState(false)
 
     const [ products, setProducts ] = useState([])
     const {id} = useParams();
@@ -35,23 +38,13 @@ const Details = () => {
           quantity  
         } 
       })
-<<<<<<< HEAD
-      swal("Berhasil!", "Silakan Melakukan Pembayaran!", "success");
-=======
-      alert('Produk ditambahkan ke keranjang');
->>>>>>> 0e225e750393d4f8d580742e0b1f39ae11106b35
+
+      swal("Berhasil!", "Add To Cart!", "success");
+
+     
+
     }
 
-    const getList = () => {
-        client
-          .get(`/api/v1/products/${id}`,{
-          })
-          .then((res) => {
-            console.log(res);
-            setProducts(res.data.products);
-          })
-          .catch((err) => {});
-      };
     
       useEffect(() => {
         const getList = () => {
@@ -72,14 +65,31 @@ const Details = () => {
             setQuantity(quantity-1)
         }
     }
+
+    useEffect(() => {
+      setLoading(true)
+      setTimeout(() => {
+        setLoading(false)
+      }, 5000)
+    }, [])
+
   return (
     <div>
       <Nav />
+     <div className="loadingDus">
+          {loading ? (
+
+          <ClimbingBoxLoader size= {30} color={"#000000"}  loading={loading} 
+
+          />
+
+          ) : (
+          
       <div className="small-container">
         <div className="single-product">
           <div className="row">  
             <div className="col-2">
-              <Link to="/products" className="back"> &#8592; back </Link>
+              <Link to="/products" className="back"> Go back </Link>
                 <img
                   src={`${imageUrl}${
                     products.image
@@ -91,42 +101,38 @@ const Details = () => {
                 />   
             </div>    
             <div className="col-2"> 
-                <h1 className="name">{products.nama_produk}</h1>
+                <h1 className="name">{products.nama_products}</h1>
                 <div className="deskripsi">    
+                <p>{products.deskripsi}</p>
                   <h4 className="actualPrice">Rp.{" "}
                     {new Number(products.price).toLocaleString("id-ID")}
                   </h4> 
-                  <select>
-                  <option>Select-size</option>
-                      <option>XXL</option>
-                      <option>XL</option>
-                      <option>L</option>
-                      <option>M</option>
-                      <option>S</option>
-                  </select>
+                 
+                 
                   <div className="plus-minus">
                       <span className="dec" onClick={decQuantity}><BsDash /></span>
                       <span className="quantity">{quantity}</span>
                       <span className="inc" onClick={() => setQuantity(quantity+1)}><BsPlus/></span>
                   </div>
-<<<<<<< HEAD
-                  <div className="btn-keranjang">    
-=======
+
+
                   <div className="btn-keranjang">
                    
->>>>>>> 0e225e750393d4f8d580742e0b1f39ae11106b35
-                      <button className="btn-default" onClick={() => addCart()}>Masukan Keranjang </button>
+
+                      <button className="btn-default" onClick={() => addCart()}> Add To Cart </button>
                   </div>
                   <div className="details">
-                    <h3> Deskripsi Produk <i className="fa fa-indent"></i></h3>
-                    <p>{products.deskripsi}</p>
+                  
+                 
                   </div>
                 </div> 
               </div> 
           </div> 
         </div>
       </div>
-      <Footer />
+          )}
+      </div>
+  
     </div>
   ) 
 }

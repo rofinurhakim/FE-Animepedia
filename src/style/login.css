@@ -1,76 +1,118 @@
-.container {
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Kirang+Haerang&display=swap');
+
+ 
+h5 {
+    font-family: Benne;
+    font-size: 20px;
+    margin-bottom: 0px;
+}    
+    
+.card-header h4 {
+    font-size: 28px;
+    font-family: Kirang Haerang ;
+    margin-bottom: 0px;
+}    
+
+.form-group input {
+    padding-right: 30px;
+    padding-left: 30px;
 }
-.row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-} 
- .col-2 {
-    flex-basis: 50%;
-    min-width: 300px;
+.form-group button {
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
 }
-.account-page {
-    padding: 50px 0;
-    background: radial-gradient(#fff,#ffd6d6);
+.form-group button:hover{
+    background-color: red;
+    opacity: 0.5;   
 }
-.form-container {
-    background: #fff;
-    width: 350px;
-    height: 500px;
-    position: relative;
+
+.footer-link a:hover {
+    color: #fc544b;
+    cursor: pointer;
+}
+
+.footer-link a {
+    color: #000000;
+}
+
+
+.section {
+   padding-left: 20px;
+   padding-right: 20px;
+   margin-top: 20px;
+  }
+  
+
+.login-brand {
+    margin: 20px 0;
+    margin-bottom: 40px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #666;
     text-align: center;
-    padding: 20px 0;
-    margin: auto;
-    box-shadow: 0 0 20px 0px rgba(0,0,0,1);
-    overflow: hidden;
-}
-.form-container span {
-    font-weight: bold;
-    padding: 0 10px;
-    color: #555;
-    cursor: pointer;
-    width: 100px;
-    display: inline-block;
-}
-.form-btn a{
-   padding: 10px;
-   font-weight: 900;
-}
-.form-btn a:hover {
-    border-bottom: 1px solid  #ff523b;
-}
-.form-container form{
-    max-width: 350px;
-    padding: 0 20px;
-    position: absolute;
-    top: 40px;
-    transition: transform 1s;
-}
-.login-form input {
-    width: 90%;
-    padding: 10px 10px;
-    border: 1px solid #ccc;
-    outline: none;
-}
-.login-form .btn {
-    width: 90%;
+  }
+
+  .shadow-light {
+    box-shadow: 0 2px 6px black;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    background-color: #fff;
+    border-radius: 3px;
     border: none;
-    cursor: pointer;
-    margin: 40px 0;
-    border-radius: 5px;
-    outline: none;
-    height: 40px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .card .card-body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .header-one {
+    border: 10px solid black;
+    text-align: center;
+  }
+
+  
+.card .card-header {
+    border-bottom-color: #000000;
+    line-height: 30px;
+    -ms-grid-row-align: center;
+    align-self: center;
+    width: 100%;
+    min-height: 70px;
+    padding: 15px 25px;
+    align-items: center;
+  }
+  
+.form-group {
+    margin-bottom: 25px;
+  }
+
+.text-danger {
+    color: #fc544b !important;
 }
-.login-form {
-    margin-top: 5%;
+
+.form-control {
+    background-color: #fdfdff;
+    border-color: #e4e6fc;
 }
-.login-form p {
-    padding: 10px 15px;
-    display: flex;
+
+.simple-footer {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
+
+
+
+
+
+
+
 

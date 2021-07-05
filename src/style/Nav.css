@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,24 +14,55 @@ body {
     align-items: center;
     padding: 20px;
 }
+
+.logo {
+    background-color: black;
+    color: white;
+    padding: 7px;
+}
+
+.logo h1 {
+    font-family: 'Tourney', cursive;
+
+}
+
+.menu {
+    background-color: black;
+    
+ 
+}
+
+.menu li {
+    font-family: 'Dosis', sans-serif;
+}
+
+
+
 nav {
-    flex: 1;
-    text-align: right;
+    
+    text-align: center;
 }
 nav ul {
     display: inline-block;
     list-style: none;
+    padding-left: 25px;
 }
-nav ul li {
+nav ul li  {
     display: inline-block;
     margin-right: 20px;
+    color: white;
 }
+
+nav a {
+    color: white;
+}
+
 a{
     text-decoration: none;
-    color: #555;
+    color: black;
 }
 p {
-    color: #555;
+    color: rgb(219, 192, 192);
 }
 .container {
     max-width: 1400px;
@@ -43,6 +77,16 @@ p {
     width: 30px;
     height: 30px;
 }
+
+.img_cart button {
+    width: 92%;
+  
+    margin-left: 17px;
+    background-color: white;
+    padding: 6px;
+}
+
+
 .header {
     background: radial-gradient(#fff,#ffd6d6);
 }
@@ -51,21 +95,22 @@ p {
     width: 25px;
     border-radius: 50%;
     color: #fff;
-    background:  #ff523b;
+    background:  black;
     font-size: 15px;
     display: flex;
     justify-content: center;
     position: relative;
     bottom: 40px;
-    left: 20px;
+    left: 44px;
  }
 
  .user {
     float: right;
-    width: 76px;
+    width: 33px;
     position: relative;
     right: 72px;
-    bottom: 65px
+    bottom: 91px;
+    background-color: white;
 }
  
 
@@ -86,3 +131,8 @@ p {
     float: left;
 }
 
+.header {
+    background-image: url(../image/navbar.jpg);
+  
+  }
+  

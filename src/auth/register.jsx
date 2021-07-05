@@ -1,8 +1,11 @@
 import React from 'react'
-import "../style/login.css"
+import "../style/reagister.css"
 import { Link, useHistory } from 'react-router-dom'
 import { RegisterData, useForm } from '../service/auth'
 import { useState } from 'react'
+import swal from 'sweetalert'
+import SaoBg from '../image/SAO.jpg'
+
 
 const Register = () => {
 
@@ -11,7 +14,7 @@ const Register = () => {
     const [ loader, setLoader ] = useState(false)
 
     const nextLogin = () => {
-        console.log('bismillah')
+       
         history.push('/login')
         history.go()
     }
@@ -19,84 +22,135 @@ const Register = () => {
     const submitForm = () => {
         setLoader(true)
         RegisterData(form, setLoader, nextLogin)
+        swal("Succses", "Create Account Sucsses", 'sucsses' )
     }
 
-    return (
-        
-        <div className="account-page">
-            <div className="container">
-                <div className="row">
-                    <div className="col-2">
-                        <img src= {`images/image1.png`}/>
-                    </div>
-                    <div className="col-2">
-                        <div className="form-container">
-                            <div className="form-btn">
-                               <Link to ="/login"> Login </Link>
-                               <Link to ="/register"> Register </Link>
-                            </div>
-                            <form method="POST" className="form">
-                                <div className="login-form">
-                                <p> Full Name </p>
-                                <input 
-                                    id="nama_lengkap"
-                                    type="text"
-                                    placeholder="Full_Name"
-                                    name="nama_lengkap"
-                                    autoFocus
-                                    onChange={(e) => inputChangeHanlder(e)}
-                                />
-                                <p>Email</p>
-                                <input 
-                                    id="email"
-                                    type="email" 
-                                    placeholder="email"
-                                    name="email"
-                                    onChange={(e) => inputChangeHanlder(e)}
-                                    />
-                               <p>Password</p>
-                                <input 
-                                    id="password"
-                                    type="password"
-                                    placeholder="password"
-                                    name="password"
-                                    onChange={(e) => inputChangeHanlder(e)}
-                                    />
+    const goToLogin = () => {
+        history.push('/login')
+      }
+    
 
-                                <p>Password confirmation</p> 
-                                <input 
-                                    type="password"
-                                    id="passwordKonfirmasi" 
-                                    name="passwordKonfirmasi"
-                                    placeholder="confirmation"
-                                    onChange={(e) => inputChangeHanlder(e)}
-                                
-                                />   
-                                    {!loader ? (
-                                        <button 
-                                        type="button" 
-                                        class="btn"
-                                        onClick={() => submitForm()}
-                                        >
-                                            Register
-                                        </button>    
-                                    ) : (
-                                        <button
-                                        type="button"
-                                        className="btn"
-                                        disabled={true}
-                                    >
-                                        <span></span>
-                                        Processing
-                                    </button>
-                                    )}
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+    return (
+        <div id="app">
+        <section class="section">
+          <div class="container mt-5">
+            <div class="row">
+              <div  style={{border: "2px solid black", textAlign:"center"}} class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-8 offset-xl-2">
+                <div class="login-brand">
+                  <img
+                    src={SaoBg}
+                    alt="logo"
+                    width="50%"
+                    class="shadow-light rounded-circle"
+                  />
                 </div>
+
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>Register</h4>
+                  </div>
+
+                  <div class="card-body">
+                    <form method="POST">
+                      <div class="row">
+                        <div class="form-group col-12">
+                          <label for="nama_lengkap"><h5>Full Name</h5></label>
+                          <input
+                            id="nama_lengkap"
+                            type="text"
+                            class="form-control"
+                            name="nama_lengkap"
+                            autofocus
+                            onChange={(e) => inputChangeHanlder(e)}
+                          />
+                          <span className="text-danger"></span>
+                        </div>
+                        
+                      </div>
+
+                      <div class="form-group">
+                        <label for="email"><h5>Email</h5></label>
+                        <input
+                          id="email"
+                          type="email"
+                          class="form-control"
+                          name="email"
+                          onChange={(e) => inputChangeHanlder(e)}
+                        />
+                          <span className="text-danger"></span>
+                      </div>
+
+                      <div class="row">
+                        <div class="form-group col-6">
+                          <label for="password" class="d-block">
+                            <h5>Password</h5>
+                          </label>
+                          <input
+                            id="password"
+                            type="password"
+                            class="form-control pwstrength"
+                            data-indicator="pwindicator"
+                            name="password"
+                            onChange={(e) => inputChangeHanlder(e)}
+                          />
+                             <span className="text-danger"></span>
+                          <div id="pwindicator" class="pwindicator">
+                            <div class="bar"></div>
+                            <div class="label"></div>
+                          </div>
+                        </div>
+                        <div class="form-group col-6">
+                          <label for="password2" class="d-block">
+                            <h5>Password Confirmation</h5>
+                          </label>
+                          <input
+                            id="passwordKonfirmasi"
+                            type="password"
+                            class="form-control"
+                            name="passwordKonfirmasi"
+                            onChange={(e) => inputChangeHanlder(e)}
+                          />
+                             <span className="text-danger"></span>
+                        </div>
+                      </div>
+
+                      
+                     
+                      
+
+                      <div class="form-group">
+
+                      {!loader ? (
+                          <button
+                            type="button"
+                            className="btn btn-primary btn-lg btn-block"
+                            onClick={() => submitForm()}
+                          >
+                            Register
+                          </button>
+                        ) : (
+                          <button
+                            type="button"
+                            className="btn btn-primary btn-lg btn-block"
+                            disabled={true}
+                          >
+                            <span className="spinner-border spinner-border-sm mr-2"></span>
+                            Processing
+                          </button>
+                        )}
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="footer-login">Do you have account ? {""}
+                <a onClick={() => goToLogin()}>Login</a>
+                 </div>
+              </div>
             </div>
-        </div>
+          </div>
+        </section>
+      </div>
+    
     )
 }
 

@@ -1,8 +1,20 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;   
 }
+
+.loadingDus {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
 .row {
     display: flex;
     align-items: center;
@@ -38,7 +50,7 @@
 
 .btn-default {
     display: inline-block;
-    background: #ff523b;
+    background: black;
     color: #fff;
     padding: 15px 50px 15px 50px;
     border-radius: 5px;
@@ -46,25 +58,25 @@
     cursor: pointer;
 }
 .btn-default:hover {
-    background: #563434;
+    background: red;
 }
 .plus-minus {
     margin-top: 40px;
 }
 
 .inc {
-    border:1px solid #ff523b;
+    
     padding: 10px;
     cursor: pointer;
 }
 .quantity {
-	border:1px solid #ff523b;
+	
     padding: 10px;
     cursor: pointer;
     margin: 15px;
 }
 .dec {
-    border:1px solid #ff523b;
+ 
     padding: 10px;
     cursor: pointer;
     align-items: center;  
@@ -83,12 +95,20 @@
 }
 .col-2 .name {
     margin-left: 35px;
+    border-bottom: 2px solid black;
+    inline-size: fit-content;
 }
 .back {
-    color: #ff523b;
-    font-size: 20px;
+    color:  black;
+    font-size: 15px;
     font-weight: 700;
+    border-bottom: 2px solid black;
 }
 .col-2 .deskripsi {
     margin-left: 40px;
+}
+
+.deskripsi p {
+    color:black ;
+    margin-top: 20px;
 }

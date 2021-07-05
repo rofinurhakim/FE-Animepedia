@@ -1,56 +1,189 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Poppins', sans-serif;;
-}
-.container {
-    max-width: 1300px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 25px;
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.container1 {
+   margin-left: 77px;
+   margin-right: 77px;
+   
 }
 
-.img_cart {
-    width: 30px;
-    height: 30px;
+.bgd {
+   position: fixed;
+   top: 0;
+   z-index: -1;
+   height: 94%;
+
+
 }
-.row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
+
+.title2 {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 84px;
 }
-.col-2 {
-    flex-basis: 50%;
-    min-width: 300px;
+
+.title2 .header1 {
+   font-size: 30px;
+   font-family: 'Montserrat', sans-serif;
+   color: #000000;
+   padding-top: 11px;
+
+
 }
-.col-2 img {
-    max-width: 115%;
-    padding: 50px 0;
+.title2 .header1 h1 {
+   font-weight: normal;
+   margin: 0;
+   
 }
-.col-2 h1 {
-    font-size: 50px;
-    line-height: 60px;
-    margin  : 25px 0;
+
+.title2 .sub-header {
+   font-family: 'Montserrat', sans-serif;
+   border-right: 1px solid #E7F0F2;
+   height: fit-content;
+   padding-right: 15px;
+   
 }
-.btn {
-    display: inline-block;
-    background: #ff523b;
-    color: #fff;
-    padding: 8px 30px;
-    margin: 30px 0;
-    border-radius: 30px;
-    transition: 0.5s;
+
+.title2 .sub-header p {
+   color: rgba(0, 0, 0, 0.4);
+   font-size: 12px;
+   font-weight: 600;
+   margin-bottom: 20px;
+   cursor: pointer;
+   
 }
-.btn:hover {
-    background: #563434;
+
+.title2 .sub-header h5 {
+   color: rgba(0, 0, 0, 0.4);
+   font-size: 16px;
+   font-weight: 600;
+   margin-bottom: 20px;
+  
+   
 }
+
+.title2 .sub-header p:hover {
+   color: red;
+   opacity: 0.8;
+}
+
+.mainpage-content {
+   margin-top: 4rem;
+   display: flex;
+   justify-content: space-between;
+
+}
+
+.shopnow-butt button {
+   text-align: center;
+   background: #000000;
+   font-size: 12px;
+   color: white;
+   font-family: 'Ubuntu', sans-serif;
+   padding: 7.5px 20px;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+.shopnow-butt button:hover {
+   color: red;
+   opacity: 0.8;    
+}
+
+
+
+
+.desc h3 {
+   font-weight: normal;
+   font-size: 36px;
+   font-family: 'Ubuntu', sans-serif;
+   text-align: right;
+   margin: 0;
+}
+
+.paragraf p {
+   font-style: normal;
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 14px;
+   margin-top: 83px;
+   text-align: right;
+   color: rgba(0, 0, 0, 0.55);
+   font-family: 'Ubuntu', sans-serif;
+   border-top: 1px solid #E5E5E5;
+   width: fit-content;
+   margin-left: auto;
+   padding-top: 13px;
+   padding-left: 28px
+}
+
+.feature {
+   margin-top: 28.5px;
+   display: flex;
+   justify-content: flex-end;
+   
+}
+
+.feature .card {
+   width: 215px;
+   height: 114px;
+   background-color:#000000;
+   color: white;
+   position: relative;
+   margin-left: 49px;
+}
+
+.feature .card h6 {
+   margin-bottom: 0px;
+   font-family: 'Roboto', sans-serif;
+   line-height: 11px;
+   font-weight: 100;
+   font-size: 14px;
+   margin-left: 27px;
+  
+} 
+
+.feature .card p {
+   margin-top: 0;
+   font-family: 'Ubuntu', sans-serif;
+   line-height: 8px;
+   font-weight: normal;
+   font-size: 9px;
+   color: white;
+   margin-right: 5px;
+   border-top: none;
+   
+   
+}
+
+.feature .card > div {
+   position: absolute;
+   right: 10px;
+   bottom: 0px;
+}
+
+.footer {
+   text-align: center;
+   margin-top: 74px;
+   border-top: 1px solid #C4C4C4;
+}
+
+.footer .icon {
+   padding-top: 11px;
+   padding-bottom: 12px;
+}
+
 .header {
-    background: radial-gradient(#fff,#ffd6d6);
+  background-image: url(../image/navbar.jpg);
+
 }
-/* .header .row {
-    margin-top: 70px;
-} */
+
+.content-right {
+    background-image: url(../image/LuffyBG.jpg);
+    padding: 300px;
+}

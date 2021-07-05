@@ -1,20 +1,13 @@
 const cartData = JSON.parse(localStorage.getItem('cart-data'));
 const cartTotalQty = JSON.parse(localStorage.getItem('cart-total-qty'));
 const cartTotalPrice = JSON.parse(localStorage.getItem('cart-total-price'));
-<<<<<<< HEAD
 const user = JSON.parse(localStorage.getItem('user'));
-=======
->>>>>>> 0e225e750393d4f8d580742e0b1f39ae11106b35
 
 const initState = {
     products: cartData === null ? [] : cartData,
     totalPrice: cartTotalPrice === null ? 0 : cartTotalPrice,
-<<<<<<< HEAD
     totalQuantities: cartTotalQty === null ? 0 : cartTotalQty,
     user
-=======
-    totalQuantities: cartTotalQty === null ? 0 : cartTotalQty
->>>>>>> 0e225e750393d4f8d580742e0b1f39ae11106b35
 }
 
 
@@ -29,10 +22,6 @@ const CartReducer = (state = initState, action) => {
             const Tquantities = state.totalQuantities + quantity;
             const check = state.products.find(pr => pr.id === products.id);
             
-<<<<<<< HEAD
-=======
-
->>>>>>> 0e225e750393d4f8d580742e0b1f39ae11106b35
             if (check) {
                 state = {
                     ...state,
@@ -79,6 +68,9 @@ const CartReducer = (state = initState, action) => {
         case 'REMOVE':
             findPro = state.products.find(product => product.id === action.payload);
             const filtered = state.products.filter(product => product.id !== action.payload);
+            localStorage.removeItem('cart-data');
+            localStorage.removeItem('cart-total-qty');
+            localStorage.removeItem('cart-total-price');
             return {
                 ...state,
                 products: filtered,

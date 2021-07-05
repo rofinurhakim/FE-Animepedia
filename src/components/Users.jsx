@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import {  useHistory } from "react-router-dom";
 import { LogoutData } from "../service/auth";
+import { NavDropdown } from "react-bootstrap";
+import { FaUserAstronaut } from "react-icons/fa";
 
 const UserDropdown = () => {
   
@@ -28,19 +30,11 @@ const UserDropdown = () => {
     return (
       
       <div className="user">
-        
-          <i class="fa fa-user" aria-hidden="true"></i>
-            <a className="nama"
-        >
-          {user ? user.nama_lengkap : ""}
-        </a>
-            <a
-            href=""
-            className="out"
-            onClick={() => onLogout()}
-          >
-           <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
-          </a>
+          <FaUserAstronaut></FaUserAstronaut> 
+            <NavDropdown   title= {  user ? user.nama_lengkap : ""} id="basic-nav-dropdown"  >
+               
+        <NavDropdown.Item  onClick={onLogout}> LogOut   </NavDropdown.Item>
+      </NavDropdown> 
         
         </div>
     );

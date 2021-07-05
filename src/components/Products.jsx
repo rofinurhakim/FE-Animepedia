@@ -4,16 +4,27 @@ import "./../style/Product.css"
 import client from '../service/axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import Nav from "./Nav"
+import  PacmanLoader from "react-spinners/PacmanLoader";
+
+
+import Nav from "../components/Nav"
 
 const Products = () => {
-  const imageUrl = "http://localhost:5100/";
+  const imageUrl = "http://localhost:3000/";
   const [ products, setProducts ] = useState([])
   const [pageCount, setPageCount] = useState(0);
   const [ limit, setLimit ] = useState(12)
   const [ page, setPage ] = useState(1)
   const [search, setSearch] = useState(""); 
   const [ totalPage, setTotalPage ] = useState(1)
+  const [ loading, setLoading] = useState(false);
+
+  useEffect(() => {
+      setLoading(true)
+      setTimeout(() => {
+        setLoading(false)
+      }, 5000)
+  }, [])
   
   const getList = () => {
     client
@@ -74,11 +85,24 @@ const Products = () => {
   }
 
     return (
-      <div> 
-        <Nav />
-        <div className="small-container">
-          <div className="float-right"> 
-            <h1 className="title"> Semua Produk </h1>
+    
+      
+      <div className="LoadingPac"> 
+         
+           <Nav></Nav>
+      <div className= 'loadingPac'>
+           {loading ? (
+
+             <PacmanLoader size= {30} color={"#000000"}  loading={loading} 
+           
+             />
+             
+              ) : (
+   
+        <div  className="small-container">
+            
+          <div className="float-right">
+            
             <div className="input-group">
               <input
                 type="text"
@@ -112,14 +136,7 @@ const Products = () => {
                           className="img-url"
                         />
                       </Link>
-                      <h3>{product.nama_produk}</h3>
-                      <div class="rating"> 
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-half-o"></i>
-                      </div>
+                      <h3>{product.nama_products}</h3>
                       <h4 className="actualPrice">Rp.{" "}
                         {new Number(product.price).toLocaleString("id-ID")}
                       </h4>   
@@ -135,7 +152,13 @@ const Products = () => {
                 <a onClick={changePage}>&raquo;</a>
             </div>
           </div>
+               ) }
+
       </div>
+
+      </div>
+     
+     
     )
 }
 
