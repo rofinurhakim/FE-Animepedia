@@ -19,8 +19,11 @@
     flex-wrap: wrap;
 }
 .row-cart .col-name {
-    width: 17%;
-    color: red;
+    width: 33%;
+    color: dimgrey;    
+    border: 1px solid black;
+    text-align: center;
+
 
 }
 .col-cart {

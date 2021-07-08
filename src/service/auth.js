@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { clearError, fieldError } from "../utils/errorField";
+// import { clearError, fieldError } from "../utils/errorField";
 import client from "./axios";
 
 export const useForm = () => {
@@ -15,7 +15,7 @@ export const useForm = () => {
       const { value, id } = e.target
   
       if (form[id] !== "") {
-        clearError(id);
+        // clearError(id);
       }
       setForm({ ...form, [id]: value });
     };
@@ -40,7 +40,7 @@ export const useForm = () => {
         // simpan di local storage
       })
       .catch((err) => {
-        fieldError(err.response.data.message);
+        // fieldError(err.response.data.message);
         return;
       })
       .then(() => {

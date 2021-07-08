@@ -1,0 +1,19 @@
+
+.container-purchace {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.row-purchace {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.purcha {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    color: white;
+}
